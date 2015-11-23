@@ -1,2 +1,2 @@
 # evapp
-AngularJS CRUD application
+AngularJS CURD application
