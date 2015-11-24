@@ -2,11 +2,26 @@
 
 ## Packages
 
-- [ ] `npm install mongoose`
-- [ ] `mongoose = require('mongoose')` /server.js 
+- [x] `npm install mongoose`
+- [x] `mongoose = require('mongoose')` /server.js 
 
 ## Database/MongoDB
-- [ ] Create REST API
+- [x] Create REST API
+- [ ] Create `eventlist` database
+- [ ] Create `events` collection
+- [ ] Enter fake data to database
+
+## Item ``events` collection` data
+- [ ] title
+- [ ] location Google map directive)
+- [ ] cost
+- [ ] discount
+- [ ] gallery
+- [ ] video
+- [ ] description
+- [ ] reviews
+- [ ] services
+- [ ] additional info
 
 ## Modules
 
@@ -15,10 +30,13 @@
 - [ ] Item
 - [ ] Google map (directive)
 
-## Unit Testing
-- [ ] Main [controller]
+## Item
+
+
+## End-to-End
+
 
 ## UI
 
 ## Clean up
-- [ ] Server
+- [x] Server/Config

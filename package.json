@@ -1,7 +1,7 @@
 {
-  "name": "jade-starter",
-  "description": "Jade Template starter",
-  "author": "@ElmahdiMahmoud (https://github.com/elmahdim/jade-starter)",
+  "name": "evapp",
+  "description": "AngularJS CRUD application",
+  "author": "Mahmoud (http://elmahdim.com)",
   "dependencies": {
     "angular": "^1.4.8",
     "angular-resource": "^1.4.8",
@@ -13,7 +13,9 @@
     "grunt-contrib-jade": "0.8.x",
     "grunt-contrib-uglify": "0.2.x",
     "grunt-contrib-watch": "0.5.x",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "mongoose": "^4.2.7"
   },
-  "engine": "node >= 0.12"
+  "engine": "node >= 0.12",
+  "license": "MIT"
 }
