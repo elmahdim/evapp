@@ -7,34 +7,33 @@
 
 ## Database/MongoDB
 - [x] Create REST API
-- [ ] Create `eventlist` database
-- [ ] Create `events` collection
-- [ ] Enter fake data to database
+- [x] Create `evapp_db` database
+- [x] Create `events` collection
+- [x] Enter fake data to database
 
 ## Item ``events` collection` data
-- [ ] title
-- [ ] location Google map directive)
-- [ ] cost
-- [ ] discount
+- [x] title
+- [ ] location
+- [x] cost
+- [x] discount
 - [ ] gallery
 - [ ] video
-- [ ] description
+- [x] summary
 - [ ] reviews
 - [ ] services
 - [ ] additional info
+- [x] type
+- [ ] date
 
 ## Modules
 
 - [x] Main
 - [ ] List
 - [ ] Item
-- [ ] Google map (directive)
-
-## Item
-
+- [ ] Google map shared-directive
+- [ ] Percentage shared-filter
 
 ## End-to-End
-
 
 ## UI
 
