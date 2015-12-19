@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       nonull: true
     },
     app: {
-        src : [ 'src/js/src_app.js', 'src/js/app/*/*.js' ],
+        src : [ 'src/js/src_app.js', 'src/js/app/*/*.js', 'src/js/app/*/*/*.js' ],
         dest: 'public/js/app.js',
         nonull: true
     }

@@ -1,8 +1,12 @@
 .container
   .row
     .col-sm-4(ng-repeat="event in events")
-      h2 {{event.title}}
+      h2
+        a(href="/event/{{event.title.split(' ').join('-') | lowercase}}") {{event.title}}
       p
        span.label.label-default {{event.type}}
        | {{event.summary}}
       h4 {{event.cost | currency}}
+      p  {{event.zipcode}}
+    .col-sm-12
+        google-map#gmap-home.gmap-home(zipcode="H3B")

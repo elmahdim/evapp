@@ -8,7 +8,6 @@
     MainController.$inject = ['$scope', '$http'];
 
     function MainController($scope, $http) {
-
         $scope.events = [];
 
         $scope.initialize = function () {

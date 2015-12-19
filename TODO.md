@@ -13,7 +13,7 @@
 
 ## Item ``events` collection` data
 - [x] title
-- [ ] location
+- [x] location
 - [x] cost
 - [x] discount
 - [ ] gallery
