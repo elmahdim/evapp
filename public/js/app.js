@@ -51,6 +51,10 @@
                 controller  : 'MainController',
                 controllerAs: 'main'
             })
+            .when('/event/:id', {
+                templateUrl : "partials/single",
+                controller  : 'SingleController'
+            })
             .otherwise({
               redirectTo: '/'
             });
@@ -59,6 +63,22 @@
     }
 })();
  
+(function () {
+    'use strict';
+
+    angular
+        .module('evapp.controllers')
+        .controller('SingleController', SingleController);
+
+    SingleController.$inject = ['$scope', '$http'];
+
+    function SingleController($scope, $http) {
+        $scope.single = [];
+        $http.get('/single/:_id').then(function (response) {
+            $scope.single = response.data;
+        });
+    }
+})(); 
 /**
  * Created by Mahmoud on 01.12.2015.
  */

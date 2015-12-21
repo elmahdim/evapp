@@ -15,7 +15,7 @@ module.exports = function (app) {
     var Events = mongoose.model('Events', eventsSchema);
 
     app
-        // Get events
+        // Get events list
         .get('/event_list', function (req, res) {
             Events.find({}).exec(function (err, collection) {
                 /*
@@ -28,14 +28,24 @@ module.exports = function (app) {
                     console.log(err);
                 }
                 res.json(collection);
-                console.log(collection);
             })
         })
-
         .get('/', function (req, res) {
             res.render('index');
         })
         .get('/partials/:partialPath', function (req, res) {
             res.render('partials/' + req.params.partialPath);
+        })
+        .get('/single/:id', function (req, res) {
+            Events.findById(req.params.id, function(err) {
+                if (err) {
+                    console.error(err);
+                    //res.status().json(err);
+                } else {
+                    res.json();
+                    console.log('ID: ' + req.params.id);
+                }
+            });
+            // console.log(res);
         })
 }

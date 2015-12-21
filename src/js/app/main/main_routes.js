@@ -13,6 +13,10 @@
                 controller  : 'MainController',
                 controllerAs: 'main'
             })
+            .when('/event/:id', {
+                templateUrl : "partials/single",
+                controller  : 'SingleController'
+            })
             .otherwise({
               redirectTo: '/'
             });

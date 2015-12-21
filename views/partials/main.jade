@@ -2,7 +2,7 @@
   .row
     .col-sm-4(ng-repeat="event in events")
       h2
-        a(href="/event/{{event.title.split(' ').join('-') | lowercase}}") {{event.title}}
+        a(href="/event/{{event._id}}") {{event.title}}
       p
        span.label.label-default {{event.type}}
        | {{event.summary}}
