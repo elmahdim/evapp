@@ -1,4 +1,9 @@
-.container
+.container(id="{{single._id}}")
   .row
     .col-sm-12
-      h1 {{single}}
+      h1 {{single.title}}
+      p {{single.cost | currency}}
+    .col-sm-8
+      p {{single.summary}}
+    .col-sm-3.pull-right
+      google-map#gmap-home.gmap-home(zipcode="{{single.zipcode}}")

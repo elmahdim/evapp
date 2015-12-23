@@ -38,10 +38,8 @@ module.exports = function (app) {
                     //res.status().json(err);
                 } else {
                     res.json(event);
-                    console.log('ID: ' + req.params.id);
                 }
             });
-            // console.log(res);
         })
         .get('/partials/:partialPath', function (req, res) {
             res.render('partials/' + req.params.partialPath);
