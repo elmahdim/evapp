@@ -18,6 +18,7 @@ module.exports = function (app) {
         // Get events list
         .get('/event_list', function (req, res) {
             Events.find({}).exec(function (err, collection) {
+             console.log(collection);
                 /*
                 if (collection.length === 0) {
                     var event = new Events({});
@@ -27,25 +28,25 @@ module.exports = function (app) {
                 if (err) {
                     console.log(err);
                 }
-                res.json(collection);
+                res.send(collection);
             })
         })
-        .get('/', function (req, res) {
-            res.render('index');
-        })
-        .get('/partials/:partialPath', function (req, res) {
-            res.render('partials/' + req.params.partialPath);
-        })
         .get('/single/:id', function (req, res) {
-            Events.findById(req.params.id, function(err) {
+            Events.findById(req.params.id, function(err, event) {
                 if (err) {
                     console.error(err);
                     //res.status().json(err);
                 } else {
-                    res.json();
+                    res.json(event);
                     console.log('ID: ' + req.params.id);
                 }
             });
             // console.log(res);
         })
+        .get('/partials/:partialPath', function (req, res) {
+            res.render('partials/' + req.params.partialPath);
+        })
+        .get('/*', function (req, res) {
+            res.render('index');
+        });
 }

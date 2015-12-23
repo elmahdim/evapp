@@ -16,9 +16,6 @@
             .when('/event/:id', {
                 templateUrl : "partials/single",
                 controller  : 'SingleController'
-            })
-            .otherwise({
-              redirectTo: '/'
             });
       $locationProvider.html5Mode(true);
       $locationProvider.hashPrefix = '!';

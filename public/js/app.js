@@ -54,9 +54,6 @@
             .when('/event/:id', {
                 templateUrl : "partials/single",
                 controller  : 'SingleController'
-            })
-            .otherwise({
-              redirectTo: '/'
             });
       $locationProvider.html5Mode(true);
       $locationProvider.hashPrefix = '!';
@@ -70,11 +67,11 @@
         .module('evapp.controllers')
         .controller('SingleController', SingleController);
 
-    SingleController.$inject = ['$scope', '$http'];
+    SingleController.$inject = ['$scope', '$http', '$routeParams'];
 
-    function SingleController($scope, $http) {
-        $scope.single = [];
-        $http.get('/single/:_id').then(function (response) {
+    function SingleController($scope, $http, $routeParams) {
+        $scope.single = null;
+        $http.get('/single/'+$routeParams.id).then(function (response) {
             $scope.single = response.data;
         });
     }
