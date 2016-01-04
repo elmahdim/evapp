@@ -3,10 +3,9 @@
     .col-sm-4(ng-repeat="event in events")
       h2
         a(href="/event/{{event._id}}") {{event.title}}
-      p
-       span.label.label-default {{event.type}}
-       | {{event.summary}}
+      span.label.label-default {{event.type}}
+      p {{ event.summary | limitTo: 80 }}{{event.summary.length > 80 ? '&hellip;' : ''}}
       h4 {{event.cost | currency}}
       p  {{event.zipcode}}
     .col-sm-12
-        google-map#gmap-home.gmap-home(zipcode="H3B")
+        google-map#gmap-home.gmap-home(zipcode="event.zipcode")

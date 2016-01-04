@@ -20,8 +20,7 @@
 - [ ] video
 - [x] summary
 - [ ] reviews
-- [ ] services
-- [ ] additional info
+- [x] services
 - [x] type
 - [ ] date
 

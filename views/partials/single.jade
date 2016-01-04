@@ -1,3 +1,4 @@
+.hero.has-overlay
 .container(id="{{single._id}}")
   .row
     .col-sm-12
@@ -5,5 +6,26 @@
       p {{single.cost | currency}}
     .col-sm-8
       p {{single.summary}}
+      hr
+      .row
+       .col-sm-12
+        h2 Services
+       .col-sm-3(ng-if="single.services['transfer']")
+        img(src="images/icon/transport.png", alt="transfer")
+        span Transfer
+       .col-sm-3(ng-if="single.services['food']")
+        img(src="images/icon/food.png", alt="food")
+        span Food
+       .col-sm-3(ng-if="single.services['drinks']")
+        img(src="images/icon/drinks.png", alt="drinks")
+        span Drinks
+       .col-sm-3(ng-if="single.services['licenses']")
+        img(src="images/icon/copyrighted.png", alt="licenses")
+        span Licenses
+       .col-sm-12
+        hr
+        h2 Event type
+        p.text-cp {{single.type}}
+
     .col-sm-3.pull-right
-      google-map#gmap-home.gmap-home(zipcode="{{single.zipcode}}")
+      google-map#gmap-single.gmap-single.pull-up(zipcode="{{single.zipcode}}")
